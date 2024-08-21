@@ -1,80 +1,385 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0e1a2b;
-    color: #fff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.journey-container {
-    text-align: center;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.highlight {
-    color: #00aaff;
-}
-
-.journey-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.wiproexperience-section, .mobexperience-section, .msexperience-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-
-.column {
-    flex: 1;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-.journey-card {
-    background-color: #112240;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    justify-items: center;
+    max-width: 3000px;
+    margin: 0 auto;
     padding: 20px;
+
+
+}
+
+.idexperience-section, .relexperience-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    max-width: 3000px;
+    margin: 0 auto;
+    padding: 20px;
+
+
+
+}
+
+
+
+/* Wipro styles below */
+
+
+
+.wiprosection-title {
+    text-align: start;
+    width: 95%;
+    margin-left: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    color: #2c3e50;
+}
+
+
+
+.wiproCompany {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.wiprocompany-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
     position: relative;
-    text-align: left;
+    margin-top: -50px;
+    margin-left: 70%; /* Space between the text and the logo */
 }
 
-.timeline-dot {
-    width: 10px;
-    height: 10px;
-    background-color: #00aaff;
-    border-radius: 50%;
-    position: absolute;
-    left: -15px;
-    top: 25px;
+.wiproyears {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    margin-left: 65%;
 }
 
-.card-content h3 {
+.wiprorole {
     font-size: 1.2rem;
+    color: #2c3e50;
     margin-bottom: 10px;
-    color: #00aaff;
+    margin-top: -90px;
 }
 
-.card-content h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #fff;
+.wiproproject-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #34495e;
 }
 
-.card-content p {
-    font-size: 0.9rem;
-    color: #cfd8dc;
+p {
+    margin: 20px 0;
+}
+
+.wiproclient{
+    margin-top: 33px;
+}
+
+strong {
+    color: #2980b9;
+}
+
+
+
+/* Mobius Knowledge Services css are below */
+
+
+
+.mobsection-title {
+    text-align: start;
+    width: 95%;
+    margin-left: 500px;
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    color: #2c3e50;
+}
+
+.experience-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.mobcompany {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.mob-company-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    position: relative;
+    margin-top: -50px;
+    margin-left: 70%; /* Space between the text and the logo */
+}
+
+.mobyears {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-left: 65%;
+    margin-top: 5vh;
+}
+
+.mobrole {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    margin-top: -95px;
+}
+
+.mobproject-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+
+.mobclient{
+    margin-top: 33px;
+}
+
+/* MSys Technologies css are below */
+
+
+
+.mssection-title {
+    text-align: start;
+    width: 95%;
+    margin-left: 500px;
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    color: #2c3e50;
+}
+
+.msexperience-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.msexperience-card:hover {
+    transform: translateY(-5px);
+}
+
+.msCompany {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: -35px;
+    margin-top: 2px;
+}
+
+.mscompany-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    position: relative;
+    margin-top: -65px;
+    margin-left: 70%; /* Space between the text and the logo */
+}
+
+.msyears {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    margin-left: 65%;
+}
+
+.msrole {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: px;
+    margin-top: -95px;
+}
+
+.msproject-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+
+.msclient{
+    margin-top: 33px;
+}
+
+/* Ideas2IT Technologies css Details are below */
+
+
+.idsection-title {
+    text-align: start;
+    width: 95%;
+    margin-left: 500px;
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    color: #2c3e50;
+}
+
+.idexperience-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.idexperience-card:hover {
+    transform: translateY(-5px);
+}
+
+.idCompany {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.idcompany-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    position: relative;
+    margin-top: -50px;
+    margin-left: 70%; /* Space between the text and the logo */
+}
+
+.idyears {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: -10px;
+    margin-left: 65%;
+}
+
+.idrole {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    margin-top: -70px;
+}
+
+.idproject-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+
+.idclient{
+    margin-top: 33px;
+}
+
+/* Relevantz Technology Services  css Details are Below  */
+
+
+.relsection-title {
+    text-align: start;
+    width: 95%;
+    margin-left: 500px;
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    color: #2c3e50;
+}
+
+.relexperience-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.relexperience-card:hover {
+    transform: translateY(-5px);
+}
+
+.relCompany {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.relcompany-logo {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+    position: relative;
+    margin-top: ;
+    margin-left: 70%; /* Space between the text and the logo */
+}
+
+.relyears {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: -75px;
+    margin-left: 65%;
+}
+
+.relrole {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    margin-top: -50px;
+}
+
+.relproject-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+
+.relclient{
+    margin-top: 33px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .experience-card {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
 }

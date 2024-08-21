@@ -11,6 +11,7 @@ body {
 
 .skills-container {
     text-align: center;
+    
 }
 
 h1 {
@@ -44,7 +45,7 @@ h1 {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(7, minmax(100px, 1fr));
     gap: 15px;
     justify-items: center;
 }
@@ -54,13 +55,15 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    width: 120px;
+    width: 140px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
+.skill-card backend scrapy
+
 .skill-card img {
-    max-width: 50px;
+    max-width: 80px;
     margin-bottom: 10px;
 }
 
@@ -69,7 +72,16 @@ h1 {
 }
 
 .skill-card p {
-    font-weight: bold;
+    font-weight:lighter
     margin: 0;
-    font-size: 14px;
+    font-size: 15px;
 }
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    height: 0;
+    padding: 0;
+    margin: 0;
+} 

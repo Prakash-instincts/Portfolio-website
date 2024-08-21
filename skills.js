@@ -10,9 +10,9 @@ filterButtons.forEach(button => {
 
         skillCards.forEach(card => {
             if (filter === 'all' || card.classList.contains(filter)) {
-                card.style.display = 'block';
+                card.classList.remove('hidden');
             } else {
-                card.style.display = 'none';
+                card.classList.add('hidden');
             }
         });
     });
