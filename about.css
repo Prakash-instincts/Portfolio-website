@@ -1,69 +1,159 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0e1a2b;
-    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    background: #0a192f;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
-.about-container {
-    text-align: center;
+.container {
     width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    padding: 40px;
+    background: transparent;
+    border-radius: 1px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    animation: slideIn 1s ease forwards;
+    backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8em;
     margin-bottom: 20px;
+    color: #00bfff;
+    letter-spacing: 3px;
+    position: relative;
+    animation: textGradient 3s ease-in-out infinite;
+    background: linear-gradient(to right, #00bfff, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.highlight {
-    color: #00aaff;
-}
 
-.about-content {
-    background-color: #112240;
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.profile-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #00aaff;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #cfd8dc;
+.intro {
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: white;
     margin-bottom: 30px;
+    text-align: justify;
+    animation: fadeIn 1.5s ease;
 }
 
-.read-more {
-    background-color: #00aaff;
+.reveal-btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #0a192f;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 250px;
 }
 
-.read-more:hover {
-    background-color: #008ecc;
+.reveal-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+}
+
+.reveal-btn:hover::before {
+    width: 150%;
+    height: 150%;
+    opacity: 1;
+}
+
+.reveal-btn:hover {
+    background-color: #00bfff;
+}
+
+.core-competencies {
+    margin-top: 40px;
+    max-height: 300px; /* Restrict height */
+    overflow-y: auto;  /* Add scroll for overflow */
+    opacity: 0;
+    transform: scale(0.9);
+    transform-origin: top;
+    transition: all 0.8s ease;
+    pointer-events: none;
+}
+
+.core-competencies.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.core-competencies h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    animation: colorChange 10s ease-in-out infinite;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    animation: fadeInUp 2s ease;
+}
+
+ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+    font-size: 1.2em;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #00bfff;
+    border-radius: 50%;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes textGradient {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes colorChange {
+    0%, 100% { color: #444; }
+    50% { color: #00bfff;; }
 }

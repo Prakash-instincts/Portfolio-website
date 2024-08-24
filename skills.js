@@ -1,4 +1,3 @@
-// Existing JavaScript
 const filterButtons = document.querySelectorAll('.filter-btn');
 const skillCards = document.querySelectorAll('.skill-card');
 

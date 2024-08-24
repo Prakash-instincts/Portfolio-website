@@ -1,10 +1,11 @@
-/* Reset some basic styling */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    background-color: #edf2f8; /* Adjust the background color as needed */
+    font-family: 'Quicksand', sans-serif;
+    background-color: rgb(243, 243, 238);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -19,12 +20,28 @@ body, html {
     align-items: center;
 }
 
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.contact-image {
+    max-width: 200%;
+    height: auto;
+    margin-right: 800px; 
+}
+
 .container {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
+    max-width: 400px;
+    width: 200%;
+    padding: 35px;
+    padding-left: 20px;
+    margin-left: -300px;
+    background-color: transparent;
+    border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -43,10 +60,14 @@ h1 {
 }
 
 .highlight {
-    color: #00bfff; /* Adjust to your desired color */
+    color: #00bfff; 
+}
+.And {
+    margin-left:100px;
 }
 
-.social-buttons {
+
+/* .social-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -56,14 +77,17 @@ h1 {
 .social-buttons .btn {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: center;
+    padding: 15px;
     color: white;
-    border-radius: 5px;
+    border-radius: 30px;
     text-decoration: none;
     font-size: 1rem;
-}
+    box-shadow: 8px 8px 16px #d1d1d4, -8px -8px 16px #ffffff;
+    transition: box-shadow 0.3s ease;
+} */
 
-.linkedin {
+/* .linkedin {
     background-color: #0077b5;
 }
 
@@ -75,6 +99,10 @@ h1 {
     background-color: #d93025;
 }
 
+.social-buttons .btn:hover {
+    box-shadow: 5px 5px 10px #b0b0b3, -5px -5px 10px #ffffff;
+} */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -85,43 +113,38 @@ h1 {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 9px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #f0f0f3;
+    box-shadow: inset 8px 8px 16px #d1d1d4, inset -8px -8px 16px #ffffff;
+    font-size: rem;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .contact-form textarea {
     resize: vertical;
-    height: 100px;
+    height: 150px;
 }
 
 .send-btn {
-    padding: 10px 20px;
-    background-color: #00bfff;
+    padding: 15px;
+    background-color: #e84142;
     color: white;
+    width: 109%;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     font-size: 1.1rem;
-    width: 105%
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .send-btn:hover {
-    background-color: #008cba;
+    background-color: #d13334;
+    box-shadow: 2px 2px 8px #b0b0b3, 2px 2px 16px #ffffff;
 }
-
-/* .contact-image{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.contact-image img {
-    max-width: 100%;
-    height: auto;
-} */
 
 @media screen and (max-width: 768px) {
     .container {
