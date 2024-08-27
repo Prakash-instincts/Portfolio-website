@@ -1,6 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
-    background: #0a192f;
+    background: #edf2f8;
     margin: 0;
     padding: 0;
     display: flex;
@@ -25,11 +25,11 @@ body {
 h1 {
     font-size: 2.8em;
     margin-bottom: 20px;
-    color: #00bfff;
+    color: #2cb311fc;
     letter-spacing: 3px;
     position: relative;
     animation: textGradient 3s ease-in-out infinite;
-    background: linear-gradient(to right, #00bfff, #00bfff);
+    background: linear-gradient(to right, #2cb311fc, #2cb311fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -38,7 +38,7 @@ h1 {
 .intro {
     font-size: 1.3em;
     line-height: 1.8;
-    color: white;
+    color: black;
     margin-bottom: 30px;
     text-align: justify;
     animation: fadeIn 1.5s ease;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .reveal-btn:hover {
-    background-color: #00bfff;
+    background-color: #2cb311fc;
 }
 
 .core-competencies {
@@ -101,7 +101,7 @@ h1 {
 .core-competencies h2 {
     font-size: 2.2em;
     margin-bottom: 20px;
-    color: white;
+    color: black;
     text-align: center;
     animation: colorChange 10s ease-in-out infinite;
 }
@@ -110,7 +110,7 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    color: white;
+    color: black;
     animation: fadeInUp 2s ease;
 }
 
@@ -129,7 +129,7 @@ ul li::before {
     transform: translateY(-50%);
     width: 10px;
     height: 10px;
-    background-color: #00bfff;
+    background-color: #2cb311fc;
     border-radius: 50%;
 }
 
@@ -155,5 +155,5 @@ ul li::before {
 
 @keyframes colorChange {
     0%, 100% { color: #444; }
-    50% { color: #00bfff;; }
+    50% { color: #2cb311fc; }
 }

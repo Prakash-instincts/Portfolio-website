@@ -5,7 +5,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1d090904;
+    background-color: #edf2f8;
     
     color: black;
 }
@@ -29,7 +29,7 @@ body {
 .experience-card-firstrow,
 .experience-card-secondrow-left,
 .experience-card-secondrow-right {
-    background-color: lightgrey;
+    background-color: rgba(255, 255, 255, 0.149);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -44,8 +44,8 @@ body {
 .experience-card-firstrow:hover,
 .experience-card-secondrow-left:hover,
 .experience-card-secondrow-right:hover {
-    border: 2px solid #007bff; /* Blue border */
-    box-shadow: 0 0 15px rgb(0, 191, 255); /* Blue glow */
+    border: 2px solid #4ad42f; /* Blue border */
+    box-shadow: 0 0 15px #68cf54; /* Blue glow */
     transform: scale(1.03);
 }
 
@@ -74,11 +74,16 @@ body {
     margin-bottom: 20px;
 }
 
+.working-highlight{
+    color:#4ad42f;
+}
+
 /* Company and Role Styles */
 .company {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
+    color:#2ad408fc;
 }
 
 .years {
@@ -114,6 +119,10 @@ ul li {
 
 p {
     font-weight: bold;
+}
+
+.techstack-highlight{
+    color:#2ad408fc;
 }
 
 /* Company Logo */

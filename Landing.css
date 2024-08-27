@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #0a192f; 
+    font-family: 'Quicksand', sans-serif;
+    background-color: #edf2f8;
     color: #ccd6f6;
 }
 
@@ -12,17 +14,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: #0a192f;
+    background-color: #edf2f8;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .logo h1 {
-    color: white;
-    font-size: 24px;
+    color: black;
+    font-size: 40px;
     margin: 0;
     animation: slideRight 1s ease forwards;
+}
+
+.logo-highlight{
+    color:#2cb311fc;
 }
 
 .navbar {
@@ -34,6 +40,7 @@ nav {
     align-items: center;
     
     
+    
 }
 
 .navbar li {
@@ -42,26 +49,25 @@ nav {
 
 .navbar li a {
     display: inline-block;
-    color: #ccd6f6;
+    color: black;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     padding: 10px;
     opacity: 0;
-    transition: .3s;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
 
 .navbar li a:hover,
 .navbar li a.active {
-    color: #00bfff;
-    border-bottom: 2px solid #00bfff;
+    color: black;
+    border-bottom: 2px solid #65e668;
 }
 
 .btn-download {
     background-color: transparent;
-    color: #00bfff;
-    border: 2px solid #00bfff;
+    color: black;
+    border: 2px solid #65e668;
     padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
@@ -69,17 +75,17 @@ nav {
 }
 
 .btn-download:hover {
-    background-color: #00bfff;
-    background: transparent;
-    color: white;
+    background-color: #4ad42f;
+    color: #edf2f8;
 }
+
 
 .hero {
     display: flex;
     align-items: center;
     justify-content: left;
     height: calc(100vh - 80px);
-    background-color: #0a192f;
+    background-color: #edf2f8;
     text-align: left;
     padding: 0 50px;
 }
@@ -89,20 +95,20 @@ nav {
 }
 
 .hero h1 {
-    color: white;
+    color: black;
     font-size: 48px;
     margin-bottom: 10px;
 }
 
 .hero h2 {
-    color: #00bfff;
+    color: #4ad42f;
     font-size: 32px;
     margin-bottom: 20px;
     
 }
 
 .hero p {
-    color: #ccd6f6;
+    color: black;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -112,7 +118,7 @@ nav {
     gap: 20px;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary {
     text-decoration: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -120,25 +126,18 @@ nav {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
+
+
 .btn-primary {
-    background-color: #00bfff;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #65e668;
 }
 
 .btn-primary:hover {
-    background-color: #008ecc;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #00bfff;
-    border: 2px solid #00bfff;
-}
-
-.btn-secondary:hover {
-    background-color: #00bfff;
-    color: white;
+    background-color: #4ad42f;
+    color: #edf2f8;
 }
 
 footer {
@@ -148,8 +147,11 @@ footer {
 }
 
 .social-icons{
-
-    margin-top: -230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -285px;
+    margin-right: 1325px;
 
 }
 
@@ -162,20 +164,20 @@ footer {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #00bfff;
+    border: 2px solid #65e668;
     border-radius: 50%;
     font-size: 20px;
-    color:#00bfff;
+    color:#65e668;
     text-decoration: none;
-    margin: 20px 15px 30px 50px;
+    margin: 0 10px
     
     
 }
 
 .social-icons a:hover {
-    background: #00bfff;
+    background: #65e668;
     color:#ccd6f6;
-    box-shadow: 0 0 20px #00bfff;
+    box-shadow: 0 0 20px #65e668;
 }
 
 /* KEYFRAMES ANIMATION */

@@ -5,7 +5,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
-    background-color: rgb(243, 243, 238);
+    background-color: #edf2f8;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@ h1 {
 }
 
 .highlight {
-    color: #00bfff; 
+    color: #2cb311fc; 
 }
 .And {
     margin-left:100px;
@@ -131,7 +131,7 @@ h1 {
 
 .send-btn {
     padding: 15px;
-    background-color: #e84142;
+    background-color: #1d7f09cc;
     color: white;
     width: 109%;
     border: none;
@@ -142,7 +142,7 @@ h1 {
 }
 
 .send-btn:hover {
-    background-color: #d13334;
+    background-color: #2cb311fc;
     box-shadow: 2px 2px 8px #b0b0b3, 2px 2px 16px #ffffff;
 }
 
