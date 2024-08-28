@@ -44,13 +44,9 @@ body {
 .experience-card-firstrow:hover,
 .experience-card-secondrow-left:hover,
 .experience-card-secondrow-right:hover {
-    border: 2px solid #4ad42f; /* Blue border */
-    box-shadow: 0 0 15px #68cf54; /* Blue glow */
-    transform: scale(1.03);
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 8px 16px #4ad42f;
 }
-
-
-
 
 
 
@@ -69,14 +65,23 @@ body {
 
 /* Header Section */
 .section-title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+  
+
 }
 
 .working-highlight{
+
     color:#4ad42f;
+    font-size: 45px;
+    font-weight: bold;
+
+
 }
+
+
 
 /* Company and Role Styles */
 .company {

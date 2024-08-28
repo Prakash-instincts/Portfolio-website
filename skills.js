@@ -6,20 +6,25 @@ filterButtons.forEach(button => {
         const filter = button.dataset.filter;
 
         skillCards.forEach(card => {
-            if (filter === 'all' || card.classList.contains(filter)) {
-                card.classList.remove('hidden');
-                if (filter === 'frontend') {
-                    card.classList.add('shift-up'); // Add shift-up for frontend
+            if (filter === 'all') {
+                card.classList.remove('hidden', 'shift-up', 'shift-left');
+            } else if (filter === 'frontend') {
+                if (card.classList.contains('frontend')) {
+                    card.classList.add('shift-up', 'shift-left');
+                    card.classList.remove('hidden');
                 } else {
-                    card.classList.remove('shift-up'); // Remove shift-up for other filters
+                    card.classList.add('hidden');
                 }
-            } else {
-                card.classList.add('hidden');
-                card.classList.remove('shift-up'); // Remove shift-up for hidden cards
+            } else if (filter === 'backend') {
+                if (card.classList.contains('frontend')) {
+                    card.classList.add('hidden');
+                } else {
+                    card.classList.remove('hidden', 'shift-up', 'shift-left');
+                }
             }
         });
-        
-        // Ensure the clicked button is highlighted
+
+        // Update active button state
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
     });
