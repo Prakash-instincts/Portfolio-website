@@ -7,10 +7,10 @@ filterButtons.forEach(button => {
 
         skillCards.forEach(card => {
             if (filter === 'all') {
-                card.classList.remove('hidden', 'shift-up', 'shift-left');
+                card.classList.remove('hidden', 'shift-up');
             } else if (filter === 'frontend') {
                 if (card.classList.contains('frontend')) {
-                    card.classList.add('shift-up', 'shift-left');
+                    card.classList.add('shift-up');
                     card.classList.remove('hidden');
                 } else {
                     card.classList.add('hidden');
@@ -19,7 +19,7 @@ filterButtons.forEach(button => {
                 if (card.classList.contains('frontend')) {
                     card.classList.add('hidden');
                 } else {
-                    card.classList.remove('hidden', 'shift-up', 'shift-left');
+                    card.classList.remove('hidden', 'shift-up');
                 }
             }
         });
