@@ -1,59 +1,28 @@
 function showContent(contentId) {
-    var aboutMeContent = document.getElementById("aboutMe");
-    var coreCompContent = document.getElementById("coreCompetencies");
-    var aboutMeBtn = document.getElementById("aboutMeBtn");
-    var coreCompBtn = document.getElementById("coreCompetenciesBtn");
+  var aboutMeContent = document.getElementById("aboutMe");
+  var aboutMeBtn = document.getElementById("aboutMeBtn");
+  var coreCompContent = document.getElementById("coreCompetencies");
+  var coreCompBtn = document.getElementById("coreCompetenciesBtn");
+  var leaderContent = document.getElementById("Leadership");
+  var leaderBtn = document.getElementById("LeadershipBtn");
 
-    if (contentId === 'aboutMe') {
-        aboutMeContent.classList.add("active");
-        coreCompContent.classList.remove("active");
-        aboutMeBtn.classList.add("active");
-        coreCompBtn.classList.remove("active");
-    } else {
-        coreCompContent.classList.add("active");
-        aboutMeContent.classList.remove("active");
-        coreCompBtn.classList.add("active");
-        aboutMeBtn.classList.remove("active");
-    }
+  // Reset all content and buttons
+  aboutMeContent.classList.remove("active");
+  aboutMeBtn.classList.remove("active");
+  coreCompContent.classList.remove("active");
+  coreCompBtn.classList.remove("active");
+  leaderContent.classList.remove("active");
+  leaderBtn.classList.remove("active");
+
+  // Activate the selected content and button
+  if (contentId === 'aboutMe') {
+      aboutMeContent.classList.add("active");
+      aboutMeBtn.classList.add("active");
+  } else if (contentId === 'coreCompetencies') {
+      coreCompContent.classList.add("active");
+      coreCompBtn.classList.add("active");
+  } else if (contentId === 'Leadership') {
+      leaderContent.classList.add("active");
+      leaderBtn.classList.add("active");
+  }
 }
-
-const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-
-const numBalls = 50;
-const balls = [];
-
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
-  ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${Math.random()}em`;
-  ball.style.height = ball.style.width;
-  
-  balls.push(ball);
-  document.body.append(ball);
-}
-
-// Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
-  };
-
-  let anim = el.animate(
-    [
-      { transform: "translate(0, 0)" },
-      { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ],
-    {
-      duration: (Math.random() + 1) * 2000, // random duration
-      direction: "alternate",
-      fill: "both",
-      iterations: Infinity,
-      easing: "ease-in-out"
-    }
-  );
-});

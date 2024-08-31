@@ -115,6 +115,9 @@ nav {
     color: black;
     line-height: 1.6;
     margin-bottom: 30px;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 450;
 }
 
 .hero-buttons {
@@ -142,6 +145,11 @@ nav {
 .btn-primary:hover {
     background-color: #4ad42f;
     color: #edf2f8;
+}
+
+.vimal_home{
+    margin-top: -570px;
+    margin-left: 920px;
 }
 
 .social-icons{
