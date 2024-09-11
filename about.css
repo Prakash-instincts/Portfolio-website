@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding: 20px; /* Added padding for better spacing on smaller screens */
 }
 
 .about-container h2 {
@@ -19,9 +20,10 @@ body {
     font-weight: bold;
     font-size: 45px;
     margin-top: 70px;
+    text-align: center; /* Center-align title on all screens */
 }
 
-.core-highlight{
+.core-highlight {
     color: #4ad42f;
 }
 
@@ -30,6 +32,7 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     z-index: 2; /* Keep buttons above other content */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 button {
@@ -42,7 +45,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 10px 5px; /* Adjusted margin for better spacing on smaller screens */
 }
 
 button.active,
@@ -60,17 +63,16 @@ button:hover {
 
 .about-image {
     position: absolute;
-    margin-top: -50px;
-    margin-left: -150px;
     top: 20px; 
     left: 0;
     width: 50%; 
     z-index: 1; 
+    margin-top: -50px;
+    margin-left: -150px;
 }
 
 .about-image img {
     width: 100%;
-
 }
 
 .content-section {
@@ -111,3 +113,136 @@ button:hover {
     top: 0;
 }
 
+/* Mobile devices (320px - 480px) */
+@media (max-width: 480px) {
+    .about-container h2 {
+        font-size: 18px;
+    }
+
+    .buttons {
+        position: relative;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-top: 450px;
+    
+    }
+
+    .buttons button {
+        flex: 1; 
+        margin: 5px; 
+        min-width: 2%;
+        font-size: 15px; 
+    }
+    .about-content {
+        width: 100%;
+        padding: 0;
+    
+    }
+
+    .content-section {
+        position: relative;
+        margin-left: 0;
+        padding-left: 0;
+        font-size: 18px;
+        color: black;
+        line-height: 1.5;
+        text-align: start;
+        
+    }
+
+
+    
+
+    .about-image {
+        position: relative;
+        margin-top: -650px;
+        padding-left: 100px;  
+        width: 100%;
+    }
+
+    .content-section {
+        position: relative;
+        margin-top: 320px;
+    }
+}
+
+/* Larger smartphones and small tablets (481px - 767px) */
+@media (max-width: 767px) {
+    .about-container h2 {
+        font-size: 35px;
+    }
+
+    .about-content {
+        width: 90%;
+    }
+
+    .about-image {
+        width: 325px;
+        height: auto;
+        top: 120px;
+        left: 80px;
+    }
+
+    .content-section {
+        margin-left: 40%;
+    }
+}
+
+/* Tablets and small laptops (768px - 1024px) */
+@media (max-width: 1024px) {
+    .about-container h2 {
+        font-size: 40px;
+    }
+
+    .about-content {
+        width: 85%;
+    }
+
+    .about-image {
+        width: 450px;
+        height: auto;
+        left: 50px;
+    }
+
+    .content-section {
+        margin-left: 42%;
+    }
+}
+
+/* Laptops and desktops (1025px - 1440px) */
+@media (max-width: 1440px) {
+    .about-container h2 {
+        font-size: 45px;
+    }
+
+    .about-content {
+        width: 80%;
+    }
+
+    .about-image {
+        margin-left: -150px;
+    }
+
+    .content-section {
+        margin-left: 45%;
+    }
+}
+
+/* Large screen laptop & desktops (1441px to 1528px) */
+@media (min-width: 1441px) and (max-width: 1528px) {
+    .about-container h2 {
+        font-size: 50px;
+    }
+
+    .about-content {
+        width: 75%;
+    }
+
+    .about-image {
+        margin-left: -170px;
+    }
+
+    .content-section {
+        margin-left: 46%;
+    }
+}
